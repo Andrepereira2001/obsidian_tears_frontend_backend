@@ -171,10 +171,10 @@ export const itemIdlFactory = ({ IDL }) => {
     _mintNftsFromArray: IDL.Func([IDL.Vec(IDL.Vec(IDL.Nat8))], [], ["oneway"]),
     acceptCycles: IDL.Func([], [], []),
     addWhitelistWallets: IDL.Func([IDL.Vec(AccountIdentifier)], [], ["oneway"]),
-    adminKillHeartbeat: IDL.Func([], [], []),
-    adminKillHeartbeatExtra: IDL.Func([IDL.Text], [], []),
-    adminStartHeartbeat: IDL.Func([], [], []),
-    adminStartHeartbeatExtra: IDL.Func([IDL.Text], [], []),
+    adminKillTimer: IDL.Func([], [], []),//adminKillHeartbeat: IDL.Func([], [], []),
+    adminKillTimerExtra: IDL.Func([IDL.Text], [], []),//adminKillHeartbeatExtra: IDL.Func([IDL.Text], [], []),
+    adminStartTimer: IDL.Func([], [], []),//adminStartHeartbeat: IDL.Func([], [], []),
+    adminStartTimerExtra: IDL.Func([IDL.Text], [], []),//adminStartHeartbeatExtra: IDL.Func([IDL.Text], [], []),
     allPayments: IDL.Func(
       [],
       [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(SubAccount)))],
@@ -220,7 +220,7 @@ export const itemIdlFactory = ({ IDL }) => {
     http_request: IDL.Func([HttpRequest], [HttpResponse], ["query"]),
     initCap: IDL.Func([], [], []),
     initiateSale: IDL.Func([], [], ["oneway"]),
-    isHeartbeatRunning: IDL.Func([], [IDL.Bool], ["query"]),
+    isTimerRunning: IDL.Func([], [IDL.Bool], ["query"]),//isHeartbeatRunning: IDL.Func([], [IDL.Bool], ["query"]),
     list: IDL.Func([ListRequest], [Result_3], []),
     listings: IDL.Func(
       [],
